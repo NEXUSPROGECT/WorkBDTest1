@@ -20,26 +20,26 @@ namespace LearnForms1
         private void tStripTab1_Click(object sender, EventArgs e)
         {
             nameTable = "fin_asset";
-            dataSet = LoadDataInGrid.exstractData(dataGridView1, nameTable, labelNameTable);
+            dataSet = LoadDataInGrid.ExtractData(dataGridView1, nameTable, labelNameTable);
         }
 
         //КНОПКА ОТКРЫТИЯ ТАБЛИЦЫ "JOB"
         private void tStripTab2_Click(object sender, EventArgs e)
         {
             nameTable = "bond";
-            dataSet = LoadDataInGrid.exstractData(dataGridView1, nameTable, labelNameTable);
+            dataSet = LoadDataInGrid.ExtractData(dataGridView1, nameTable, labelNameTable);
         }
 
         private void tStripTab3_Click(object sender, EventArgs e)
         {
             nameTable = "tiker";
-            dataSet = LoadDataInGrid.exstractData(dataGridView1, nameTable, labelNameTable);
+            dataSet = LoadDataInGrid.ExtractData(dataGridView1, nameTable, labelNameTable);
         }
 
         private void securityToolStripMenuItem_Click(object sender, EventArgs e)
         {
             nameTable = "securit";
-            dataSet = LoadDataInGrid.exstractData(dataGridView1, nameTable, labelNameTable);
+            dataSet = LoadDataInGrid.ExtractData(dataGridView1, nameTable, labelNameTable);
         }
 
 
