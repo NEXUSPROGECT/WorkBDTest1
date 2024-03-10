@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
-
+using System.Xml;
 
 namespace LearnForms1
 {
@@ -33,10 +33,13 @@ namespace LearnForms1
                 id_sel.Value = id;
                 command.Parameters.Add(id_sel);
 
+
                 //ПОЛУЧЕНИЕ ДАННЫХ ИЗ ХРАНИМОЙ ПРОЦЕДУРЫ
                 connection.Open();
-                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-                adapter.Fill(dataSet, "YourTableName");
+                MySqlDataReader reader = command.ExecuteReader();
+                DataTable dataTable = new DataTable("YourTableName");
+                dataTable.Load(reader);
+                dataSet.Tables.Add(dataTable);
                 connection.Close();
             }
 

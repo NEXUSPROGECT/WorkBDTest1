@@ -35,9 +35,11 @@ namespace LearnForms1
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tStripTab1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.finAssetBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.tStripTab2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tStripTab3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.securityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelNameTable = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRemRow = new System.Windows.Forms.Button();
             this.lbIdForDel = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@ namespace LearnForms1
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.securityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelNameTable = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -123,7 +123,7 @@ namespace LearnForms1
             this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tStripTab1,
+            this.finAssetBtn,
             this.tStripTab2,
             this.tStripTab3,
             this.securityToolStripMenuItem});
@@ -135,29 +135,45 @@ namespace LearnForms1
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // tStripTab1
+            // finAssetBtn
             // 
-            this.tStripTab1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tStripTab1.Name = "tStripTab1";
-            this.tStripTab1.Size = new System.Drawing.Size(77, 25);
-            this.tStripTab1.Text = "Fin Asset";
-            this.tStripTab1.Click += new System.EventHandler(this.tStripTab1_Click);
+            this.finAssetBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.finAssetBtn.Name = "finAssetBtn";
+            this.finAssetBtn.Size = new System.Drawing.Size(113, 25);
+            this.finAssetBtn.Text = "Fin Asset";
+            this.finAssetBtn.Click += new System.EventHandler(this.finAsset_Click);
             // 
             // tStripTab2
             // 
             this.tStripTab2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tStripTab2.Name = "tStripTab2";
-            this.tStripTab2.Size = new System.Drawing.Size(77, 25);
+            this.tStripTab2.Size = new System.Drawing.Size(113, 25);
             this.tStripTab2.Text = "Bond";
-            this.tStripTab2.Click += new System.EventHandler(this.tStripTab2_Click);
+            this.tStripTab2.Click += new System.EventHandler(this.bond_Click);
             // 
             // tStripTab3
             // 
             this.tStripTab3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tStripTab3.Name = "tStripTab3";
-            this.tStripTab3.Size = new System.Drawing.Size(77, 25);
+            this.tStripTab3.Size = new System.Drawing.Size(113, 25);
             this.tStripTab3.Text = "Tiker";
-            this.tStripTab3.Click += new System.EventHandler(this.tStripTab3_Click);
+            this.tStripTab3.Click += new System.EventHandler(this.tiker_Click);
+            // 
+            // securityToolStripMenuItem
+            // 
+            this.securityToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.securityToolStripMenuItem.Name = "securityToolStripMenuItem";
+            this.securityToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
+            this.securityToolStripMenuItem.Text = "Security";
+            this.securityToolStripMenuItem.Click += new System.EventHandler(this.security_Click);
+            // 
+            // labelNameTable
+            // 
+            this.labelNameTable.AutoSize = true;
+            this.labelNameTable.Location = new System.Drawing.Point(7, 2);
+            this.labelNameTable.Name = "labelNameTable";
+            this.labelNameTable.Size = new System.Drawing.Size(0, 13);
+            this.labelNameTable.TabIndex = 6;
             // 
             // label2
             // 
@@ -201,7 +217,6 @@ namespace LearnForms1
             this.txtBoxIdRowForDel.Name = "txtBoxIdRowForDel";
             this.txtBoxIdRowForDel.Size = new System.Drawing.Size(53, 20);
             this.txtBoxIdRowForDel.TabIndex = 2;
-            this.txtBoxIdRowForDel.TextChanged += new System.EventHandler(this.txtBoxIdRowForDel_TextChanged);
             // 
             // btnSaveTable
             // 
@@ -254,7 +269,6 @@ namespace LearnForms1
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "by n4d3sh";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnClearObl
             // 
@@ -276,7 +290,6 @@ namespace LearnForms1
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "<- id bonds";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtBoxIdForObl
             // 
@@ -296,7 +309,7 @@ namespace LearnForms1
             this.button1.TabIndex = 1;
             this.button1.Text = "Exequte";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnStoreProc_Click);
             // 
             // dataGridView2
             // 
@@ -325,22 +338,6 @@ namespace LearnForms1
             // colJob
             // 
             this.colJob.Name = "colJob";
-            // 
-            // securityToolStripMenuItem
-            // 
-            this.securityToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.securityToolStripMenuItem.Name = "securityToolStripMenuItem";
-            this.securityToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
-            this.securityToolStripMenuItem.Text = "Security";
-            this.securityToolStripMenuItem.Click += new System.EventHandler(this.securityToolStripMenuItem_Click);
-            // 
-            // labelNameTable
-            // 
-            this.labelNameTable.AutoSize = true;
-            this.labelNameTable.Location = new System.Drawing.Point(7, 2);
-            this.labelNameTable.Name = "labelNameTable";
-            this.labelNameTable.Size = new System.Drawing.Size(0, 13);
-            this.labelNameTable.TabIndex = 6;
             // 
             // Form1
             // 
@@ -379,7 +376,7 @@ namespace LearnForms1
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ToolStripMenuItem tStripTab1;
+        private System.Windows.Forms.ToolStripMenuItem finAssetBtn;
         private System.Windows.Forms.ToolStripMenuItem tStripTab2;
         private System.Windows.Forms.ToolStripMenuItem tStripTab3;
         private System.Windows.Forms.DataGridView dataGridView1;

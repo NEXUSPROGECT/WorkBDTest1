@@ -17,29 +17,25 @@ namespace LearnForms1
         }
 
         //КНОПКА ОТКРЫТИЯ ТАБЛИЦЫ "PERSON"
-        private void tStripTab1_Click(object sender, EventArgs e)
+        private void finAsset_Click(object sender, EventArgs e)
         {
-            nameTable = "fin_asset";
-            dataSet = LoadDataInGrid.ExtractData(dataGridView1, nameTable, labelNameTable);
+            OpenTable("fin_asset");
         }
 
         //КНОПКА ОТКРЫТИЯ ТАБЛИЦЫ "JOB"
-        private void tStripTab2_Click(object sender, EventArgs e)
+        private void bond_Click(object sender, EventArgs e)
         {
-            nameTable = "bond";
-            dataSet = LoadDataInGrid.ExtractData(dataGridView1, nameTable, labelNameTable);
+            OpenTable("bond");
         }
 
-        private void tStripTab3_Click(object sender, EventArgs e)
+        private void tiker_Click(object sender, EventArgs e)
         {
-            nameTable = "tiker";
-            dataSet = LoadDataInGrid.ExtractData(dataGridView1, nameTable, labelNameTable);
+            OpenTable("tiker");
         }
 
-        private void securityToolStripMenuItem_Click(object sender, EventArgs e)
+        private void security_Click(object sender, EventArgs e)
         {
-            nameTable = "securit";
-            dataSet = LoadDataInGrid.ExtractData(dataGridView1, nameTable, labelNameTable);
+            OpenTable("serurit");
         }
 
 
@@ -47,13 +43,7 @@ namespace LearnForms1
         private void btnSaveTable_Click(object sender, EventArgs e)
         {
             SaveChangesInTable.SaveChanges(dataSet, nameTable);
-        }
-
-
-
-        private void txtBoxIdRowForDel_TextChanged(object sender, EventArgs e)
-        {
-        }
+        } 
 
 
         //ОПИСАНИЕ КНОПКИ УДАЛЕНИЙ СТРОКИ ПО ID
@@ -63,14 +53,9 @@ namespace LearnForms1
         }
 
         //ФУНКЦИЯ ХРАНИМОЙ ПРОЦЕДУРЫ
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStoreProc_Click(object sender, EventArgs e)
         {
             LoadStorProc.LoadProc(dataGridView2, txtBoxIdForObl);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnClearObl_Click(object sender, EventArgs e)
@@ -80,12 +65,23 @@ namespace LearnForms1
                 dataGridView2.Rows.RemoveAt(0);
                 dataGridView2.Refresh();
             }
-            catch(Exception r) { }
+            catch(Exception r) { MessageBox.Show(r.Message); }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
+
+
+        private void OpenTable(string tableName)
+        {
+            try
+            {
+                dataSet = LoadDataInGrid.ExtractData(dataGridView1, tableName, labelNameTable);
+                nameTable = tableName;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -23,9 +23,7 @@ namespace LearnForms1
                 }
                 txtBoxIdRowForDel.Clear();
             }
-            catch(Exception e) {}
-        }
-
-       
+            catch(Exception e) { MessageBox.Show(e.Message); }
+        }      
     }
 }
