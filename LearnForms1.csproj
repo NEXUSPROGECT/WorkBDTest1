@@ -53,6 +53,7 @@
     <Compile Include="DBMySQLUtils.cs" />
     <Compile Include="DBUtils.cs" />
     <Compile Include="DelRowForId.cs" />
+    <Compile Include="IndicateConnectBD.cs" />
     <Compile Include="LoadStorProc.cs" />
     <Compile Include="SaveChagesInTable.cs" />
     <Compile Include="LoadDataInGrid.cs" />

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace LearnForms1
 {
-    partial class Form1
+    partial class Formm1
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -139,7 +139,7 @@ namespace LearnForms1
             // 
             this.finAssetBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.finAssetBtn.Name = "finAssetBtn";
-            this.finAssetBtn.Size = new System.Drawing.Size(113, 25);
+            this.finAssetBtn.Size = new System.Drawing.Size(77, 25);
             this.finAssetBtn.Text = "Fin Asset";
             this.finAssetBtn.Click += new System.EventHandler(this.finAsset_Click);
             // 
@@ -147,7 +147,7 @@ namespace LearnForms1
             // 
             this.tStripTab2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tStripTab2.Name = "tStripTab2";
-            this.tStripTab2.Size = new System.Drawing.Size(113, 25);
+            this.tStripTab2.Size = new System.Drawing.Size(77, 25);
             this.tStripTab2.Text = "Bond";
             this.tStripTab2.Click += new System.EventHandler(this.bond_Click);
             // 
@@ -155,7 +155,7 @@ namespace LearnForms1
             // 
             this.tStripTab3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tStripTab3.Name = "tStripTab3";
-            this.tStripTab3.Size = new System.Drawing.Size(113, 25);
+            this.tStripTab3.Size = new System.Drawing.Size(77, 25);
             this.tStripTab3.Text = "Tiker";
             this.tStripTab3.Click += new System.EventHandler(this.tiker_Click);
             // 
@@ -163,7 +163,7 @@ namespace LearnForms1
             // 
             this.securityToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.securityToolStripMenuItem.Name = "securityToolStripMenuItem";
-            this.securityToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
+            this.securityToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
             this.securityToolStripMenuItem.Text = "Security";
             this.securityToolStripMenuItem.Click += new System.EventHandler(this.security_Click);
             // 
@@ -339,7 +339,7 @@ namespace LearnForms1
             // 
             this.colJob.Name = "colJob";
             // 
-            // Form1
+            // Formm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -348,8 +348,8 @@ namespace LearnForms1
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MinimumSize = new System.Drawing.Size(600, 400);
-            this.Name = "Form1";
-            this.Text = "LearnApp1";
+            this.Name = "Formm1";
+            this.Text = "Neko Paper";
             this.TransparencyKey = System.Drawing.Color.MediumPurple;
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

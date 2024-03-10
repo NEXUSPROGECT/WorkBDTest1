@@ -6,14 +6,16 @@ using System.Windows.Forms;
 
 namespace LearnForms1
 {
-    public partial class Form1 : Form
+    public partial class Formm1 : Form
     {
         public DataSet dataSet;
         private String nameTable;
+       
 
-        public Form1()
+        public Formm1()
         {
             InitializeComponent();
+            this.Text = $"NekoPaper [{IndicateConnectBD.examConnect()}]";
         }
 
         //КНОПКА ОТКРЫТИЯ ТАБЛИЦЫ "PERSON"
