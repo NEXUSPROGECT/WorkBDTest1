@@ -27,8 +27,6 @@ namespace LearnForms1
                 MessageBox.Show(ex.Message);
             }
             
-
-
             dataGridView1.DataSource = dataSet.Tables[nameTable];
             if (dataSet == null)
             {

@@ -46,7 +46,7 @@ namespace LearnForms1
         //ОПИСАНИЕ КНОПКИ СОХРАНЕНИЯ ИЗМЕНЕНИЙ В ТАБЛИЦЕ ОБРАТНО В БД
         private void btnSaveTable_Click(object sender, EventArgs e)
         {
-            SaveChagesInTable.SaveChagenges(dataSet, nameTable);
+            SaveChangesInTable.SaveChanges(dataSet, nameTable);
         }
 
 
