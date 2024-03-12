@@ -11,7 +11,6 @@ namespace LearnForms1
         public DataSet dataSet;
         private String nameTable;
        
-
         public Formm1()
         {
             InitializeComponent();
@@ -37,22 +36,44 @@ namespace LearnForms1
 
         private void security_Click(object sender, EventArgs e)
         {
-            OpenTable("serurit");
+            OpenTable("securit");
         }
-
 
         //ОПИСАНИЕ КНОПКИ СОХРАНЕНИЯ ИЗМЕНЕНИЙ В ТАБЛИЦЕ ОБРАТНО В БД
         private void btnSaveTable_Click(object sender, EventArgs e)
         {
             SaveChangesInTable.SaveChanges(dataSet, nameTable);
-        } 
+        }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            // Создаем новую строку для таблицы
+            DataRow newRow = dataSet.Tables[nameTable].NewRow();
+
+            // Добавляем эту строку в таблицу
+            dataSet.Tables[nameTable].Rows.Add(newRow);
+
+            // Обновляем DataGridView
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = dataSet.Tables[nameTable];
+
+
+
+
+            //DataRow newRow = dataSet.Tables[nameTable].NewRow();
+            //dataSet.Tables[nameTable].Rows.Add(newRow);
+            //dataGridView1.DataSource = dataSet.Tables[nameTable];
+        }
 
         //ОПИСАНИЕ КНОПКИ УДАЛЕНИЙ СТРОКИ ПО ID
         private void btnRemRow_Click(object sender, EventArgs e)
         {
-            DelRowForId.DeleteRow(txtBoxIdRowForDel, dataSet, nameTable);
+            //DelRowForId.DeleteRow(txtBoxIdRowForDel, dataSet, nameTable);
+            DeleteRow.deleteSelectRow(dataGridView1);
         }
+
+
 
         //ФУНКЦИЯ ХРАНИМОЙ ПРОЦЕДУРЫ
         private void btnStoreProc_Click(object sender, EventArgs e)
@@ -60,14 +81,17 @@ namespace LearnForms1
             LoadStorProc.LoadProc(dataGridView2, txtBoxIdForObl);
         }
 
+        //ОЧИЩЕНИЕ СТРОК В ТАБЛИЦЕ ОБЛИГАЦИЙ
         private void btnClearObl_Click(object sender, EventArgs e)
         {
-            try 
-            {
-                dataGridView2.Rows.RemoveAt(0);
-                dataGridView2.Refresh();
-            }
-            catch(Exception r) { MessageBox.Show(r.Message); }
+            //try 
+            //{
+            //    dataGridView2.Rows.RemoveAt(0);
+            //    dataGridView2.Refresh();
+            //}
+            //catch(Exception r) { MessageBox.Show(r.Message); }
+            DeleteRow.deleteSelectRow(dataGridView2);
+
         }
 
 

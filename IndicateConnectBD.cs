@@ -11,8 +11,6 @@ namespace LearnForms1
     {
         public static string examConnect() 
         {
-            
-            
                 using(MySqlConnection connection = DBUtils.GetDBConnection() ) 
                 {
                     try 
@@ -21,13 +19,8 @@ namespace LearnForms1
                         connection.Close();
                         return "CONNECTED";
                     }
-                    catch { return "NOT CONNECTED"; }
-                   
+                    catch { return "NOT CONNECTED"; } 
                 }
-                
-
-            
-            
         }
     }
 }

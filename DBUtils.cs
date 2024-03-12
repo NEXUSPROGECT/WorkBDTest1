@@ -4,7 +4,6 @@ namespace LearnForms1
 {
     internal class DBUtils
     {
-
         public static MySqlConnection GetDBConnection()
         {
             string host = "127.0.0.1";

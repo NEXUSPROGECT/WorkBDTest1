@@ -36,14 +36,13 @@ namespace LearnForms1
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.finAssetBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.tStripTab2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tStripTab3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.securityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bondBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.tikerBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.securityBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.labelNameTable = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRemRow = new System.Windows.Forms.Button();
-            this.lbIdForDel = new System.Windows.Forms.Label();
-            this.txtBoxIdRowForDel = new System.Windows.Forms.TextBox();
             this.btnSaveTable = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -107,11 +106,10 @@ namespace LearnForms1
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.splitContainer1.Panel2.Controls.Add(this.btnAdd);
             this.splitContainer1.Panel2.Controls.Add(this.labelNameTable);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.btnRemRow);
-            this.splitContainer1.Panel2.Controls.Add(this.lbIdForDel);
-            this.splitContainer1.Panel2.Controls.Add(this.txtBoxIdRowForDel);
             this.splitContainer1.Panel2.Controls.Add(this.btnSaveTable);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Size = new System.Drawing.Size(821, 487);
@@ -124,9 +122,9 @@ namespace LearnForms1
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.finAssetBtn,
-            this.tStripTab2,
-            this.tStripTab3,
-            this.securityToolStripMenuItem});
+            this.bondBtn,
+            this.tikerBtn,
+            this.securityBtn});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MaximumSize = new System.Drawing.Size(130, 0);
             this.menuStrip1.MinimumSize = new System.Drawing.Size(130, 450);
@@ -143,29 +141,40 @@ namespace LearnForms1
             this.finAssetBtn.Text = "Fin Asset";
             this.finAssetBtn.Click += new System.EventHandler(this.finAsset_Click);
             // 
-            // tStripTab2
+            // bondBtn
             // 
-            this.tStripTab2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tStripTab2.Name = "tStripTab2";
-            this.tStripTab2.Size = new System.Drawing.Size(77, 25);
-            this.tStripTab2.Text = "Bond";
-            this.tStripTab2.Click += new System.EventHandler(this.bond_Click);
+            this.bondBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bondBtn.Name = "bondBtn";
+            this.bondBtn.Size = new System.Drawing.Size(77, 25);
+            this.bondBtn.Text = "Bond";
+            this.bondBtn.Click += new System.EventHandler(this.bond_Click);
             // 
-            // tStripTab3
+            // tikerBtn
             // 
-            this.tStripTab3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tStripTab3.Name = "tStripTab3";
-            this.tStripTab3.Size = new System.Drawing.Size(77, 25);
-            this.tStripTab3.Text = "Tiker";
-            this.tStripTab3.Click += new System.EventHandler(this.tiker_Click);
+            this.tikerBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tikerBtn.Name = "tikerBtn";
+            this.tikerBtn.Size = new System.Drawing.Size(77, 25);
+            this.tikerBtn.Text = "Tiker";
+            this.tikerBtn.Click += new System.EventHandler(this.tiker_Click);
             // 
-            // securityToolStripMenuItem
+            // securityBtn
             // 
-            this.securityToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.securityToolStripMenuItem.Name = "securityToolStripMenuItem";
-            this.securityToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
-            this.securityToolStripMenuItem.Text = "Security";
-            this.securityToolStripMenuItem.Click += new System.EventHandler(this.security_Click);
+            this.securityBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.securityBtn.Name = "securityBtn";
+            this.securityBtn.Size = new System.Drawing.Size(77, 25);
+            this.securityBtn.Text = "Security";
+            this.securityBtn.Click += new System.EventHandler(this.security_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackgroundImage = global::LearnForms1.Properties.Resources.btnAdded;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.Location = new System.Drawing.Point(3, 457);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(33, 33);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // labelNameTable
             // 
@@ -190,54 +199,40 @@ namespace LearnForms1
             // btnRemRow
             // 
             this.btnRemRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnRemRow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemRow.Location = new System.Drawing.Point(3, 460);
+            this.btnRemRow.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemRow.BackgroundImage = global::LearnForms1.Properties.Resources.btnDelete;
+            this.btnRemRow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemRow.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRemRow.Location = new System.Drawing.Point(62, 457);
             this.btnRemRow.Name = "btnRemRow";
-            this.btnRemRow.Size = new System.Drawing.Size(75, 23);
+            this.btnRemRow.Size = new System.Drawing.Size(33, 33);
             this.btnRemRow.TabIndex = 4;
-            this.btnRemRow.Text = "Remove";
             this.btnRemRow.UseVisualStyleBackColor = false;
             this.btnRemRow.Click += new System.EventHandler(this.btnRemRow_Click);
-            // 
-            // lbIdForDel
-            // 
-            this.lbIdForDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbIdForDel.AutoSize = true;
-            this.lbIdForDel.Location = new System.Drawing.Point(176, 465);
-            this.lbIdForDel.Name = "lbIdForDel";
-            this.lbIdForDel.Size = new System.Drawing.Size(79, 13);
-            this.lbIdForDel.TabIndex = 3;
-            this.lbIdForDel.Text = "<- id row for del";
-            // 
-            // txtBoxIdRowForDel
-            // 
-            this.txtBoxIdRowForDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxIdRowForDel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtBoxIdRowForDel.Location = new System.Drawing.Point(117, 462);
-            this.txtBoxIdRowForDel.Name = "txtBoxIdRowForDel";
-            this.txtBoxIdRowForDel.Size = new System.Drawing.Size(53, 20);
-            this.txtBoxIdRowForDel.TabIndex = 2;
             // 
             // btnSaveTable
             // 
             this.btnSaveTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSaveTable.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSaveTable.Location = new System.Drawing.Point(297, 460);
+            this.btnSaveTable.BackgroundImage = global::LearnForms1.Properties.Resources.btnSave;
+            this.btnSaveTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveTable.Location = new System.Drawing.Point(167, 457);
             this.btnSaveTable.Name = "btnSaveTable";
-            this.btnSaveTable.Size = new System.Drawing.Size(83, 23);
+            this.btnSaveTable.Size = new System.Drawing.Size(33, 33);
             this.btnSaveTable.TabIndex = 1;
-            this.btnSaveTable.Text = "Save change";
             this.btnSaveTable.UseVisualStyleBackColor = false;
             this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
             // 
             // dataGridView1
             // 
+            //this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 18);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(689, 436);
             this.dataGridView1.TabIndex = 0;
@@ -377,16 +372,14 @@ namespace LearnForms1
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolStripMenuItem finAssetBtn;
-        private System.Windows.Forms.ToolStripMenuItem tStripTab2;
-        private System.Windows.Forms.ToolStripMenuItem tStripTab3;
+        private System.Windows.Forms.ToolStripMenuItem bondBtn;
+        private System.Windows.Forms.ToolStripMenuItem tikerBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAge;
         private System.Windows.Forms.DataGridViewTextBoxColumn colJob;
         private System.Windows.Forms.Button btnSaveTable;
-        private System.Windows.Forms.Label lbIdForDel;
-        private System.Windows.Forms.TextBox txtBoxIdRowForDel;
         private System.Windows.Forms.Button btnRemRow;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button1;
@@ -395,8 +388,9 @@ namespace LearnForms1
         private System.Windows.Forms.Button btnClearObl;
         private Label label2;
         private Label label3;
-        private ToolStripMenuItem securityToolStripMenuItem;
+        private ToolStripMenuItem securityBtn;
         private Label labelNameTable;
+        private Button btnAdd;
     }
 }
 

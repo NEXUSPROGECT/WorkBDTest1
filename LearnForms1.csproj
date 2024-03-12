@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="DBMySQLUtils.cs" />
     <Compile Include="DBUtils.cs" />
+    <Compile Include="DeleteRow.cs" />
     <Compile Include="DelRowForId.cs" />
     <Compile Include="IndicateConnectBD.cs" />
     <Compile Include="LoadStorProc.cs" />
@@ -96,6 +97,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="windows-xp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAdded.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
