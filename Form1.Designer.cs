@@ -31,38 +31,39 @@ namespace LearnForms1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formm1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelNameTable = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxIdForObl = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.finAssetBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.bondBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.tikerBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.securityBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.labelNameTable = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnRemRow = new System.Windows.Forms.Button();
-            this.btnSaveTable = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnClearObl = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBoxIdForObl = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.columnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSet = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemRow = new System.Windows.Forms.Button();
+            this.btnSaveTable = new System.Windows.Forms.Button();
+            this.btnClearObl = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -78,7 +79,7 @@ namespace LearnForms1
             this.tabControl1.Location = new System.Drawing.Point(-1, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(835, 519);
+            this.tabControl1.Size = new System.Drawing.Size(834, 521);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -88,7 +89,7 @@ namespace LearnForms1
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(827, 493);
+            this.tabPage1.Size = new System.Drawing.Size(826, 495);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Edit DB";
             // 
@@ -106,13 +107,14 @@ namespace LearnForms1
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.splitContainer1.Panel2.Controls.Add(this.btnSet);
             this.splitContainer1.Panel2.Controls.Add(this.btnAdd);
-            this.splitContainer1.Panel2.Controls.Add(this.labelNameTable);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.labelNameTable);
             this.splitContainer1.Panel2.Controls.Add(this.btnRemRow);
             this.splitContainer1.Panel2.Controls.Add(this.btnSaveTable);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(821, 487);
+            this.splitContainer1.Size = new System.Drawing.Size(820, 489);
             this.splitContainer1.SplitterDistance = 122;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -120,136 +122,62 @@ namespace LearnForms1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.finAssetBtn,
-            this.bondBtn,
-            this.tikerBtn,
-            this.securityBtn});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MaximumSize = new System.Drawing.Size(130, 0);
             this.menuStrip1.MinimumSize = new System.Drawing.Size(130, 450);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(130, 487);
+            this.menuStrip1.Size = new System.Drawing.Size(130, 489);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // finAssetBtn
-            // 
-            this.finAssetBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.finAssetBtn.Name = "finAssetBtn";
-            this.finAssetBtn.Size = new System.Drawing.Size(77, 25);
-            this.finAssetBtn.Text = "Fin Asset";
-            this.finAssetBtn.Click += new System.EventHandler(this.finAsset_Click);
-            // 
-            // bondBtn
-            // 
-            this.bondBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bondBtn.Name = "bondBtn";
-            this.bondBtn.Size = new System.Drawing.Size(77, 25);
-            this.bondBtn.Text = "Bond";
-            this.bondBtn.Click += new System.EventHandler(this.bond_Click);
-            // 
-            // tikerBtn
-            // 
-            this.tikerBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tikerBtn.Name = "tikerBtn";
-            this.tikerBtn.Size = new System.Drawing.Size(77, 25);
-            this.tikerBtn.Text = "Tiker";
-            this.tikerBtn.Click += new System.EventHandler(this.tiker_Click);
-            // 
-            // securityBtn
-            // 
-            this.securityBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.securityBtn.Name = "securityBtn";
-            this.securityBtn.Size = new System.Drawing.Size(77, 25);
-            this.securityBtn.Text = "Security";
-            this.securityBtn.Click += new System.EventHandler(this.security_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackgroundImage = global::LearnForms1.Properties.Resources.btnAdded;
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.Location = new System.Drawing.Point(3, 457);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(33, 33);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // labelNameTable
-            // 
-            this.labelNameTable.AutoSize = true;
-            this.labelNameTable.Location = new System.Drawing.Point(7, 2);
-            this.labelNameTable.Name = "labelNameTable";
-            this.labelNameTable.Size = new System.Drawing.Size(0, 13);
-            this.labelNameTable.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(636, 441);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(638, 470);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "by n4d3sh";
             // 
-            // btnRemRow
+            // labelNameTable
             // 
-            this.btnRemRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnRemRow.BackColor = System.Drawing.Color.Transparent;
-            this.btnRemRow.BackgroundImage = global::LearnForms1.Properties.Resources.btnDelete;
-            this.btnRemRow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRemRow.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemRow.Location = new System.Drawing.Point(62, 457);
-            this.btnRemRow.Name = "btnRemRow";
-            this.btnRemRow.Size = new System.Drawing.Size(33, 33);
-            this.btnRemRow.TabIndex = 4;
-            this.btnRemRow.UseVisualStyleBackColor = false;
-            this.btnRemRow.Click += new System.EventHandler(this.btnRemRow_Click);
-            // 
-            // btnSaveTable
-            // 
-            this.btnSaveTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSaveTable.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSaveTable.BackgroundImage = global::LearnForms1.Properties.Resources.btnSave;
-            this.btnSaveTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSaveTable.Location = new System.Drawing.Point(167, 457);
-            this.btnSaveTable.Name = "btnSaveTable";
-            this.btnSaveTable.Size = new System.Drawing.Size(33, 33);
-            this.btnSaveTable.TabIndex = 1;
-            this.btnSaveTable.UseVisualStyleBackColor = false;
-            this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
+            this.labelNameTable.AutoSize = true;
+            this.labelNameTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.45F);
+            this.labelNameTable.Location = new System.Drawing.Point(342, 22);
+            this.labelNameTable.Name = "labelNameTable";
+            this.labelNameTable.Size = new System.Drawing.Size(0, 15);
+            this.labelNameTable.TabIndex = 6;
             // 
             // dataGridView1
             // 
-            //this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 40);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(689, 436);
+            this.dataGridView1.Size = new System.Drawing.Size(687, 443);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.btnClearObl);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.txtBoxIdForObl);
-            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.btnClearObl);
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(827, 493);
+            this.tabPage2.Size = new System.Drawing.Size(826, 495);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Obligation Info";
             // 
@@ -259,28 +187,17 @@ namespace LearnForms1
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(768, 444);
+            this.label3.Location = new System.Drawing.Point(770, 442);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "by n4d3sh";
             // 
-            // btnClearObl
-            // 
-            this.btnClearObl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnClearObl.Location = new System.Drawing.Point(323, 465);
-            this.btnClearObl.Name = "btnClearObl";
-            this.btnClearObl.Size = new System.Drawing.Size(75, 23);
-            this.btnClearObl.TabIndex = 4;
-            this.btnClearObl.Text = "Clear Table";
-            this.btnClearObl.UseVisualStyleBackColor = true;
-            this.btnClearObl.Click += new System.EventHandler(this.btnClearObl_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 469);
+            this.label1.Location = new System.Drawing.Point(105, 468);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 3;
@@ -290,21 +207,10 @@ namespace LearnForms1
             // 
             this.txtBoxIdForObl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxIdForObl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtBoxIdForObl.Location = new System.Drawing.Point(136, 465);
+            this.txtBoxIdForObl.Location = new System.Drawing.Point(42, 465);
             this.txtBoxIdForObl.Name = "txtBoxIdForObl";
             this.txtBoxIdForObl.Size = new System.Drawing.Size(57, 20);
             this.txtBoxIdForObl.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(9, 465);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 20);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Exequte";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnStoreProc_Click);
             // 
             // dataGridView2
             // 
@@ -315,8 +221,28 @@ namespace LearnForms1
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(824, 457);
+            this.dataGridView2.Size = new System.Drawing.Size(826, 455);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // finAssetBtn
+            // 
+            this.finAssetBtn.Name = "finAssetBtn";
+            this.finAssetBtn.Size = new System.Drawing.Size(32, 19);
+            // 
+            // bondBtn
+            // 
+            this.bondBtn.Name = "bondBtn";
+            this.bondBtn.Size = new System.Drawing.Size(32, 19);
+            // 
+            // tikerBtn
+            // 
+            this.tikerBtn.Name = "tikerBtn";
+            this.tikerBtn.Size = new System.Drawing.Size(32, 19);
+            // 
+            // securityBtn
+            // 
+            this.securityBtn.Name = "securityBtn";
+            this.securityBtn.Size = new System.Drawing.Size(32, 19);
             // 
             // columnId
             // 
@@ -334,6 +260,78 @@ namespace LearnForms1
             // 
             this.colJob.Name = "colJob";
             // 
+            // btnSet
+            // 
+            this.btnSet.BackgroundImage = global::LearnForms1.Properties.Resources.free_icon_setting_3421830;
+            this.btnSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSet.Location = new System.Drawing.Point(661, 5);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(30, 30);
+            this.btnSet.TabIndex = 8;
+            this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackgroundImage = global::LearnForms1.Properties.Resources.btnAdded;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.Location = new System.Drawing.Point(3, 7);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(27, 27);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnRemRow
+            // 
+            this.btnRemRow.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemRow.BackgroundImage = global::LearnForms1.Properties.Resources.btnDelete;
+            this.btnRemRow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemRow.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRemRow.Location = new System.Drawing.Point(36, 7);
+            this.btnRemRow.Name = "btnRemRow";
+            this.btnRemRow.Size = new System.Drawing.Size(27, 27);
+            this.btnRemRow.TabIndex = 4;
+            this.btnRemRow.UseVisualStyleBackColor = false;
+            this.btnRemRow.Click += new System.EventHandler(this.btnRemRow_Click);
+            // 
+            // btnSaveTable
+            // 
+            this.btnSaveTable.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSaveTable.BackgroundImage = global::LearnForms1.Properties.Resources.btnSave;
+            this.btnSaveTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveTable.Location = new System.Drawing.Point(69, 7);
+            this.btnSaveTable.Name = "btnSaveTable";
+            this.btnSaveTable.Size = new System.Drawing.Size(27, 27);
+            this.btnSaveTable.TabIndex = 1;
+            this.btnSaveTable.UseVisualStyleBackColor = false;
+            this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
+            // 
+            // btnClearObl
+            // 
+            this.btnClearObl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearObl.BackgroundImage = global::LearnForms1.Properties.Resources.btnDelete;
+            this.btnClearObl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClearObl.Location = new System.Drawing.Point(790, 461);
+            this.btnClearObl.Name = "btnClearObl";
+            this.btnClearObl.Size = new System.Drawing.Size(27, 27);
+            this.btnClearObl.TabIndex = 4;
+            this.btnClearObl.UseVisualStyleBackColor = true;
+            this.btnClearObl.Click += new System.EventHandler(this.btnClearObl_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::LearnForms1.Properties.Resources.free_icon_eject_10347376;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(9, 461);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 27);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnStoreProc_Click);
+            // 
             // Formm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,6 +340,7 @@ namespace LearnForms1
             this.ClientSize = new System.Drawing.Size(830, 519);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "Formm1";
             this.Text = "Neko Paper";
@@ -354,8 +353,6 @@ namespace LearnForms1
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -391,6 +388,7 @@ namespace LearnForms1
         private ToolStripMenuItem securityBtn;
         private Label labelNameTable;
         private Button btnAdd;
+        private Button btnSet;
     }
 }
 

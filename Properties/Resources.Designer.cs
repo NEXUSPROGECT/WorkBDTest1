@@ -93,6 +93,26 @@ namespace LearnForms1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_eject_10347376 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-eject-10347376", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_setting_3421830 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-setting-3421830", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap windows_xp {
             get {
                 object obj = ResourceManager.GetObject("windows_xp", resourceCulture);

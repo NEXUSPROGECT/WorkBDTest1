@@ -9,12 +9,18 @@ namespace LearnForms1
 {
     internal class SaveChangesInTable
     {
-        public static void SaveChanges(DataSet dataSet, string nameTable)
+        public static void SaveChanges(DataGridView dataGridView)
         {
             using (MySqlConnection connection = DBUtils.GetDBConnection())
             {
                 try
                 {
+                    string nameTable = "";
+                    DataTable dataTable = dataGridView.DataSource as DataTable;
+                    if(dataTable == null ) { return; }
+                    nameTable = dataTable.TableName;
+                    DataSet dataSet = dataTable?.DataSet;
+                    
                     connection.Open();
 
                     foreach (DataRow row in dataSet.Tables[nameTable].Rows)

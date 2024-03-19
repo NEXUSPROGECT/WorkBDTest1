@@ -7,7 +7,7 @@ namespace LearnForms1
     {
 
         public static MySqlConnection
-                 GetDBConnection(string host, int port, string database, string username, string password)
+                 GetDBConnection(string host, string port, string database, string username, string password)
         {
             // Connection String.
             String connString = "Server=" + host + ";Database=" + database
