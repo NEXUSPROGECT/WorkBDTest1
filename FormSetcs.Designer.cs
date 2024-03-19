@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSetcs));
             this.txtBoxNamDB = new System.Windows.Forms.TextBox();
             this.txtBoxPort = new System.Windows.Forms.TextBox();
             this.txtBoxHost = new System.Windows.Forms.TextBox();
@@ -81,7 +82,6 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(74, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
@@ -182,8 +182,11 @@
             this.Controls.Add(this.txtBoxHost);
             this.Controls.Add(this.txtBoxPort);
             this.Controls.Add(this.txtBoxNamDB);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(280, 363);
+            this.MinimumSize = new System.Drawing.Size(280, 363);
             this.Name = "FormSetcs";
-            this.Text = "FormSetcs";
+            this.Text = "Option BD";
             this.ResumeLayout(false);
             this.PerformLayout();
 

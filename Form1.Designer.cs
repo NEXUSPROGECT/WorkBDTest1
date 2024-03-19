@@ -36,14 +36,20 @@ namespace LearnForms1
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btnSet = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.labelNameTable = new System.Windows.Forms.Label();
+            this.btnRemRow = new System.Windows.Forms.Button();
+            this.btnSaveTable = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxIdForObl = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnClearObl = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.finAssetBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.bondBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.tikerBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,12 +58,6 @@ namespace LearnForms1
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSet = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemRow = new System.Windows.Forms.Button();
-            this.btnSaveTable = new System.Windows.Forms.Button();
-            this.btnClearObl = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -130,6 +130,29 @@ namespace LearnForms1
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // btnSet
+            // 
+            this.btnSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSet.BackgroundImage = global::LearnForms1.Properties.Resources.free_icon_setting_3421830;
+            this.btnSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSet.Location = new System.Drawing.Point(661, 5);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(30, 30);
+            this.btnSet.TabIndex = 8;
+            this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackgroundImage = global::LearnForms1.Properties.Resources.btnAdded;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.Location = new System.Drawing.Point(3, 7);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(27, 27);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -145,11 +168,37 @@ namespace LearnForms1
             // labelNameTable
             // 
             this.labelNameTable.AutoSize = true;
-            this.labelNameTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.45F);
-            this.labelNameTable.Location = new System.Drawing.Point(342, 22);
+            this.labelNameTable.BackColor = System.Drawing.Color.Transparent;
+            this.labelNameTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.labelNameTable.Location = new System.Drawing.Point(342, 16);
             this.labelNameTable.Name = "labelNameTable";
-            this.labelNameTable.Size = new System.Drawing.Size(0, 15);
+            this.labelNameTable.Size = new System.Drawing.Size(0, 22);
             this.labelNameTable.TabIndex = 6;
+            // 
+            // btnRemRow
+            // 
+            this.btnRemRow.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemRow.BackgroundImage = global::LearnForms1.Properties.Resources.btnDelete;
+            this.btnRemRow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemRow.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRemRow.Location = new System.Drawing.Point(36, 7);
+            this.btnRemRow.Name = "btnRemRow";
+            this.btnRemRow.Size = new System.Drawing.Size(27, 27);
+            this.btnRemRow.TabIndex = 4;
+            this.btnRemRow.UseVisualStyleBackColor = false;
+            this.btnRemRow.Click += new System.EventHandler(this.btnRemRow_Click);
+            // 
+            // btnSaveTable
+            // 
+            this.btnSaveTable.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSaveTable.BackgroundImage = global::LearnForms1.Properties.Resources.btnSave;
+            this.btnSaveTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveTable.Location = new System.Drawing.Point(69, 7);
+            this.btnSaveTable.Name = "btnSaveTable";
+            this.btnSaveTable.Size = new System.Drawing.Size(27, 27);
+            this.btnSaveTable.TabIndex = 1;
+            this.btnSaveTable.UseVisualStyleBackColor = false;
+            this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
             // 
             // dataGridView1
             // 
@@ -186,7 +235,7 @@ namespace LearnForms1
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.ForeColor = System.Drawing.Color.Gray;
             this.label3.Location = new System.Drawing.Point(770, 442);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
@@ -223,6 +272,32 @@ namespace LearnForms1
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(826, 455);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.AllowUserToAddRows = false;
+            //
+            // btnClearObl
+            // 
+            this.btnClearObl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearObl.BackgroundImage = global::LearnForms1.Properties.Resources.btnDelete;
+            this.btnClearObl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClearObl.Location = new System.Drawing.Point(790, 461);
+            this.btnClearObl.Name = "btnClearObl";
+            this.btnClearObl.Size = new System.Drawing.Size(27, 27);
+            this.btnClearObl.TabIndex = 4;
+            this.btnClearObl.UseVisualStyleBackColor = true;
+            this.btnClearObl.Click += new System.EventHandler(this.btnClearObl_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::LearnForms1.Properties.Resources.free_icon_eject_10347376;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(9, 461);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 27);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnStoreProc_Click);
             // 
             // finAssetBtn
             // 
@@ -259,78 +334,6 @@ namespace LearnForms1
             // colJob
             // 
             this.colJob.Name = "colJob";
-            // 
-            // btnSet
-            // 
-            this.btnSet.BackgroundImage = global::LearnForms1.Properties.Resources.free_icon_setting_3421830;
-            this.btnSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSet.Location = new System.Drawing.Point(661, 5);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(30, 30);
-            this.btnSet.TabIndex = 8;
-            this.btnSet.UseVisualStyleBackColor = true;
-            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackgroundImage = global::LearnForms1.Properties.Resources.btnAdded;
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.Location = new System.Drawing.Point(3, 7);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(27, 27);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnRemRow
-            // 
-            this.btnRemRow.BackColor = System.Drawing.Color.Transparent;
-            this.btnRemRow.BackgroundImage = global::LearnForms1.Properties.Resources.btnDelete;
-            this.btnRemRow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRemRow.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemRow.Location = new System.Drawing.Point(36, 7);
-            this.btnRemRow.Name = "btnRemRow";
-            this.btnRemRow.Size = new System.Drawing.Size(27, 27);
-            this.btnRemRow.TabIndex = 4;
-            this.btnRemRow.UseVisualStyleBackColor = false;
-            this.btnRemRow.Click += new System.EventHandler(this.btnRemRow_Click);
-            // 
-            // btnSaveTable
-            // 
-            this.btnSaveTable.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSaveTable.BackgroundImage = global::LearnForms1.Properties.Resources.btnSave;
-            this.btnSaveTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSaveTable.Location = new System.Drawing.Point(69, 7);
-            this.btnSaveTable.Name = "btnSaveTable";
-            this.btnSaveTable.Size = new System.Drawing.Size(27, 27);
-            this.btnSaveTable.TabIndex = 1;
-            this.btnSaveTable.UseVisualStyleBackColor = false;
-            this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
-            // 
-            // btnClearObl
-            // 
-            this.btnClearObl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClearObl.BackgroundImage = global::LearnForms1.Properties.Resources.btnDelete;
-            this.btnClearObl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClearObl.Location = new System.Drawing.Point(790, 461);
-            this.btnClearObl.Name = "btnClearObl";
-            this.btnClearObl.Size = new System.Drawing.Size(27, 27);
-            this.btnClearObl.TabIndex = 4;
-            this.btnClearObl.UseVisualStyleBackColor = true;
-            this.btnClearObl.Click += new System.EventHandler(this.btnClearObl_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::LearnForms1.Properties.Resources.free_icon_eject_10347376;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(9, 461);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 27);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnStoreProc_Click);
             // 
             // Formm1
             // 
