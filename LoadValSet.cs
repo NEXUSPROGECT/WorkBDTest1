@@ -11,15 +11,17 @@ namespace LearnForms1
 {
     internal class LoadValSet
     {
-        public static void load(TextBox hostL, TextBox portL, TextBox nameBdL, TextBox usNameL, TextBox pasL) 
+        public static void load(TextBox host, TextBox port, TextBox nameBd, TextBox usName, TextBox pas, TextBox nameSP, TextBox namPar) 
         {
             var doc = new XmlDocument();
             doc.Load(@"C:\Users\Vusez\source\repos\LearnForms1\Files\db_connection_values.xml");
-            hostL.Text = doc.SelectSingleNode("/values/host").InnerText;
-            portL.Text = doc.SelectSingleNode("/values/port").InnerText;
-            nameBdL.Text = doc.SelectSingleNode("/values/database").InnerText;
-            usNameL.Text = doc.SelectSingleNode("/values/username").InnerText;
-            pasL.Text = doc.SelectSingleNode("/values/password").InnerText;
+            host.Text = doc.SelectSingleNode("/values/host").InnerText;
+            port.Text = doc.SelectSingleNode("/values/port").InnerText;
+            nameBd.Text = doc.SelectSingleNode("/values/database").InnerText;
+            usName.Text = doc.SelectSingleNode("/values/username").InnerText;
+            pas.Text = doc.SelectSingleNode("/values/password").InnerText;
+            nameSP.Text = doc.SelectSingleNode("/values/nameStorPoc").InnerText;
+            namPar.Text = doc.SelectSingleNode("/values/parameterName").InnerText;
         }
     }
 }

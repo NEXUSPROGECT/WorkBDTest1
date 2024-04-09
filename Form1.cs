@@ -60,5 +60,10 @@ namespace LearnForms1
             FormSetcs formSetcs = new FormSetcs();
             formSetcs.Show();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchData.PerformSearch(dataGridView1);
+        }
     }
 }

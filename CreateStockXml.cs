@@ -46,6 +46,14 @@ namespace LearnForms1
                 variable5.InnerText = "rootPass123";
                 root.AppendChild(variable5);
 
+                var variable6 = doc.CreateElement("nameStorPoc");
+                variable6.InnerText = "inputObligation";
+                root.AppendChild(variable6);
+
+                var variable7 = doc.CreateElement("parameterName");
+                variable7.InnerText = "@id_bond";
+                root.AppendChild(variable7);
+
                 // Сохранение XML файла
                 doc.Save(@"C:\Users\Vusez\source\repos\LearnForms1\Files\db_connection_values.xml");
             }

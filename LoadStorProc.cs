@@ -17,8 +17,13 @@ namespace LearnForms1
                 return;
             }
 
+            var doc = new XmlDocument();
+            doc.Load(@"C:\Users\Vusez\source\repos\LearnForms1\Files\db_connection_values.xml");
+
+
             //ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ
-            string sqlExpression = "inputObligation";
+            string sqlExpression = doc.SelectSingleNode("/values/nameStorPoc").InnerText;
+            //string sqlExpression = "inputObligation";
             DataSet dataSet = new DataSet();
 
             //РАБОТА С БД
@@ -29,7 +34,7 @@ namespace LearnForms1
 
                 //РАБОТА С ХРАНИМОЙ ПРОЦЕДУРОЙ
                 MySqlParameter id_sel = new MySqlParameter();
-                id_sel.ParameterName = "@id_bond";
+                id_sel.ParameterName = doc.SelectSingleNode("/values/parameterName").InnerText;
                 id_sel.Value = id;
                 command.Parameters.Add(id_sel);
 

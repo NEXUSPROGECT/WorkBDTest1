@@ -15,12 +15,12 @@ namespace LearnForms1
         public FormSetcs()
         {
             InitializeComponent();
-            LoadValSet.load(txtBoxHost,txtBoxPort,txtBoxNamDB,txtBoxUsNam,txtBoxPas);
+            LoadValSet.load(txtBoxHost,txtBoxPort,txtBoxNamDB,txtBoxUsNam,txtBoxPas, txtBoxNameSP, txtBoxNamPar);
         }
 
         private void btnAp_Click(object sender, EventArgs e)
         {
-            SaveBDVal.Load(txtBoxHost, txtBoxPort, txtBoxNamDB, txtBoxUsNam, txtBoxPas);
+            SaveBDVal.Load(txtBoxHost, txtBoxPort, txtBoxNamDB, txtBoxUsNam, txtBoxPas, txtBoxNameSP, txtBoxNamPar);
             DialogResult result = MessageBox.Show("Необходимо перезапустить приложение. Сделать это сейчас?", "Необходим перезапуск", MessageBoxButtons.YesNo);
 
             if (result == DialogResult.Yes)

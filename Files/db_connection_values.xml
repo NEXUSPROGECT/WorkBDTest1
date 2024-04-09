@@ -4,4 +4,6 @@
   <database>paper_accounting</database>
   <username>root</username>
   <password>rootPass123</password>
+  <nameStorPoc>inputObligation</nameStorPoc>
+  <parameterName>@id_bond</parameterName>
 </values>
