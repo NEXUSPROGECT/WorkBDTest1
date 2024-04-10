@@ -29,8 +29,7 @@ namespace LearnForms1
                         button.Size = new System.Drawing.Size(77, 25);
                         button.Click += (sender, e) => LoadDataInGrid.ExtractData(datagGridView,tableName,label);
                         menuStrip1 .Items.Add(button);
-                    }
-                }
+                    }                }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);

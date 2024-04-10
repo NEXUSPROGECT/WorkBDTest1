@@ -104,6 +104,4 @@ namespace LearnForms1
             return new MySqlCommand(deleteQuery, connection);
         }
     }
-
-
 }

@@ -8,10 +8,6 @@ namespace LearnForms1
     internal class DBUtils
     {
 
-        
-       
-
-     
         public static MySqlConnection GetDBConnection()
         {
             var doc = new XmlDocument();
