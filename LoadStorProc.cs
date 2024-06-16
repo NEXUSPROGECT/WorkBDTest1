@@ -18,7 +18,7 @@ namespace LearnForms1
             }
 
             //ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ
-            string sqlExpression = "inputObligation";
+            string sqlExpression = "GetOrderDetails";
             DataSet dataSet = new DataSet();
 
             //РАБОТА С БД
@@ -29,7 +29,7 @@ namespace LearnForms1
 
                 //РАБОТА С ХРАНИМОЙ ПРОЦЕДУРОЙ
                 MySqlParameter id_sel = new MySqlParameter();
-                id_sel.ParameterName = "@id_bond";
+                id_sel.ParameterName = "@orderNumber";
                 id_sel.Value = id;
                 command.Parameters.Add(id_sel);
 

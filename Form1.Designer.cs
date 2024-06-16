@@ -38,6 +38,8 @@ namespace LearnForms1
             this.tStripTab1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tStripTab2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tStripTab3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.securityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelNameTable = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRemRow = new System.Windows.Forms.Button();
             this.lbIdForDel = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@ namespace LearnForms1
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.securityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelNameTable = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -139,25 +139,41 @@ namespace LearnForms1
             // 
             this.tStripTab1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tStripTab1.Name = "tStripTab1";
-            this.tStripTab1.Size = new System.Drawing.Size(77, 25);
-            this.tStripTab1.Text = "Fin Asset";
+            this.tStripTab1.Size = new System.Drawing.Size(113, 25);
+            this.tStripTab1.Text = "Order Type";
             this.tStripTab1.Click += new System.EventHandler(this.tStripTab1_Click);
             // 
             // tStripTab2
             // 
             this.tStripTab2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tStripTab2.Name = "tStripTab2";
-            this.tStripTab2.Size = new System.Drawing.Size(77, 25);
-            this.tStripTab2.Text = "Bond";
+            this.tStripTab2.Size = new System.Drawing.Size(113, 25);
+            this.tStripTab2.Text = "Order Veriety";
             this.tStripTab2.Click += new System.EventHandler(this.tStripTab2_Click);
             // 
             // tStripTab3
             // 
             this.tStripTab3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tStripTab3.Name = "tStripTab3";
-            this.tStripTab3.Size = new System.Drawing.Size(77, 25);
-            this.tStripTab3.Text = "Tiker";
+            this.tStripTab3.Size = new System.Drawing.Size(113, 25);
+            this.tStripTab3.Text = "Currency";
             this.tStripTab3.Click += new System.EventHandler(this.tStripTab3_Click);
+            // 
+            // securityToolStripMenuItem
+            // 
+            this.securityToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.securityToolStripMenuItem.Name = "securityToolStripMenuItem";
+            this.securityToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
+            this.securityToolStripMenuItem.Text = "Order";
+            this.securityToolStripMenuItem.Click += new System.EventHandler(this.securityToolStripMenuItem_Click);
+            // 
+            // labelNameTable
+            // 
+            this.labelNameTable.AutoSize = true;
+            this.labelNameTable.Location = new System.Drawing.Point(7, 2);
+            this.labelNameTable.Name = "labelNameTable";
+            this.labelNameTable.Size = new System.Drawing.Size(0, 13);
+            this.labelNameTable.TabIndex = 6;
             // 
             // label2
             // 
@@ -325,22 +341,6 @@ namespace LearnForms1
             // colJob
             // 
             this.colJob.Name = "colJob";
-            // 
-            // securityToolStripMenuItem
-            // 
-            this.securityToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.securityToolStripMenuItem.Name = "securityToolStripMenuItem";
-            this.securityToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
-            this.securityToolStripMenuItem.Text = "Security";
-            this.securityToolStripMenuItem.Click += new System.EventHandler(this.securityToolStripMenuItem_Click);
-            // 
-            // labelNameTable
-            // 
-            this.labelNameTable.AutoSize = true;
-            this.labelNameTable.Location = new System.Drawing.Point(7, 2);
-            this.labelNameTable.Name = "labelNameTable";
-            this.labelNameTable.Size = new System.Drawing.Size(0, 13);
-            this.labelNameTable.TabIndex = 6;
             // 
             // Form1
             // 

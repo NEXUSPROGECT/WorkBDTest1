@@ -9,7 +9,7 @@ namespace LearnForms1
         {
             string host = "127.0.0.1";
             int port = 3306;
-            string database = "paper_accounting";
+            string database = "securities_transactions";
             string username = "root";
             string password = "rootPass123";
 

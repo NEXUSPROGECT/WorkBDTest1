@@ -19,26 +19,26 @@ namespace LearnForms1
         //КНОПКА ОТКРЫТИЯ ТАБЛИЦЫ "PERSON"
         private void tStripTab1_Click(object sender, EventArgs e)
         {
-            nameTable = "fin_asset";
+            nameTable = "OrderType";
             dataSet = LoadDataInGrid.exstractData(dataGridView1, nameTable, labelNameTable);
         }
 
         //КНОПКА ОТКРЫТИЯ ТАБЛИЦЫ "JOB"
         private void tStripTab2_Click(object sender, EventArgs e)
         {
-            nameTable = "bond";
+            nameTable = "OrderVeriety";
             dataSet = LoadDataInGrid.exstractData(dataGridView1, nameTable, labelNameTable);
         }
 
         private void tStripTab3_Click(object sender, EventArgs e)
         {
-            nameTable = "tiker";
+            nameTable = "Currency";
             dataSet = LoadDataInGrid.exstractData(dataGridView1, nameTable, labelNameTable);
         }
 
         private void securityToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            nameTable = "securit";
+            nameTable = "_order";
             dataSet = LoadDataInGrid.exstractData(dataGridView1, nameTable, labelNameTable);
         }
 
@@ -46,7 +46,7 @@ namespace LearnForms1
         //ОПИСАНИЕ КНОПКИ СОХРАНЕНИЯ ИЗМЕНЕНИЙ В ТАБЛИЦЕ ОБРАТНО В БД
         private void btnSaveTable_Click(object sender, EventArgs e)
         {
-            SaveChangesInTable.SaveChanges(dataSet, nameTable);
+            SaveChagesInTable.SaveChanges(dataSet, nameTable);
         }
 
 
